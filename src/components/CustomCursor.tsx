@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 const CustomCursor: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible] = useState(() => {
+    return typeof window !== 'undefined' && window.matchMedia("(pointer: fine)").matches;
+  });
 
   useEffect(() => {
     // Only show on devices with a fine pointer (mouse)
-    if (!window.matchMedia("(pointer: fine)").matches) return;
-
-    setIsVisible(true);
+    if (!isVisible) return;
 
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -38,7 +38,7 @@ const CustomCursor: React.FC = () => {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
     };
-  }, []);
+  }, [isVisible]);
 
   if (!isVisible) return null;
 
