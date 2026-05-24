@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
             <div style={{ marginBottom: '40px' }}>
               <h3 style={{ fontSize: '2rem', marginBottom: '24px' }}>Let's talk about everything!</h3>
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                Hate forms? <a href="mailto:ibitayo.akinnibosun@gmail.com" className="text-gradient" style={{ fontWeight: 600 }}>email</a> instead.
+                Hate forms? Send me an <a href="mailto:ibitayo.akinnibosun@gmail.com" className="text-gradient" style={{ fontWeight: 600 }}>email</a> instead.
               </p>
             </div>
             
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '4px' }}>Email</h4>
-                  <p style={{ color: 'var(--text-secondary)' }}>ibitayo.akinnibosun@gmail.com</p>
+                  <p style={{ color: 'var(--text-secondary)', wordBreak: 'break-all' }}>ibitayo.akinnibosun@gmail.com</p>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
             style={{ padding: '40px' }}
           >
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
                 <input type="text" name="name" required placeholder="Your Name" style={{ width: '100%', padding: '16px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--glass-border)', borderRadius: '8px', color: '#fff', outline: 'none', fontFamily: 'inherit' }} />
                 <input type="email" name="email" required placeholder="Your Email" style={{ width: '100%', padding: '16px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--glass-border)', borderRadius: '8px', color: '#fff', outline: 'none', fontFamily: 'inherit' }} />
               </div>
