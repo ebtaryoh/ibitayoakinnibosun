@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
             <div style={{ marginBottom: '40px' }}>
               <h3 style={{ fontSize: '2rem', marginBottom: '24px' }}>Let's talk about everything!</h3>
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                Hate forms? Send me an <a href="mailto:ibitayo.akinnibosun@gmail.com" className="text-gradient" style={{ fontWeight: 600 }}>email</a> instead.
+                Hate forms? <a href="mailto:ibitayo.akinnibosun@gmail.com" className="text-gradient" style={{ fontWeight: 600 }}>email</a> instead.
               </p>
             </div>
             

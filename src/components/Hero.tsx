@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           <div className="glass" style={{ padding: '24px', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0))', position: 'relative' }}>
-             <img src="/profile.jpeg" alt="Ibitayo Akinnibosun" style={{ width: '400px', height: '400px', objectFit: 'cover', borderRadius: '50%', border: '2px solid var(--glass-border)' }} />
+             <img src="/hero-image.jpeg" alt="Ibitayo Akinnibosun" style={{ width: '400px', height: '400px', objectFit: 'cover', borderRadius: '50%', border: '2px solid var(--glass-border)' }} />
              <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', boxShadow: 'inset 0 0 40px rgba(139,92,246,0.3)', pointerEvents: 'none' }}></div>
           </div>
         </motion.div>
