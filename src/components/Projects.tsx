@@ -5,25 +5,31 @@ import { ExternalLink } from 'lucide-react';
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      category: 'Full Stack Development',
-      desc: 'A high-performance e-commerce solution with real-time inventory management and secure payment processing.',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      title: 'Roots & Radiance Network',
+      category: 'Community Enterprise Platform',
+      desc: 'A creative and enterprise community empowering diverse voices through arts, movement, and economic opportunity.',
+      tech: ['React', 'Next.js', 'TailwindCSS', 'Node.js'],
+      image: '/roots-radiance.png',
+      liveLink: 'https://www.rootsandradiancenetwork.com/',
+      githubLink: 'https://github.com/ebtaryoh/rootsandradiance'
     },
     {
       title: 'Finance Dashboard',
       category: 'Frontend & UI/UX',
       desc: 'An intuitive analytics dashboard for financial data, featuring complex data visualizations and dark mode.',
       tech: ['React', 'TypeScript', 'Chart.js', 'Figma'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      liveLink: '#',
+      githubLink: '#'
     },
     {
       title: 'Social Media App',
       category: 'Mobile & Backend',
       desc: 'A responsive social platform allowing users to share moments, chat in real-time, and discover content.',
       tech: ['React Native', 'Firebase', 'GraphQL'],
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      liveLink: '#',
+      githubLink: '#'
     }
   ];
 
@@ -83,10 +89,10 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
                 <div style={{ display: 'flex', gap: '16px' }}>
-                  <a href="#" className="bg-gradient" style={{ padding: '12px 24px', borderRadius: '8px', color: '#fff', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <a href={project.liveLink} target="_blank" rel="noreferrer" className="bg-gradient" style={{ padding: '12px 24px', borderRadius: '8px', color: '#fff', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
                     View Live <ExternalLink size={18} />
                   </a>
-                  <a href="#" style={{ padding: '12px 24px', borderRadius: '8px', color: 'var(--text-primary)', border: '1px solid var(--glass-border)', display: 'flex', alignItems: 'center', gap: '8px', background: 'var(--glass-bg)' }}>
+                  <a href={project.githubLink} target="_blank" rel="noreferrer" style={{ padding: '12px 24px', borderRadius: '8px', color: 'var(--text-primary)', border: '1px solid var(--glass-border)', display: 'flex', alignItems: 'center', gap: '8px', background: 'var(--glass-bg)', textDecoration: 'none' }}>
                     Source Code <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                   </a>
                 </div>
