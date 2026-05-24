@@ -53,12 +53,13 @@ const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              style={{ 
-                display: 'grid', 
+                          style={{ 
+                display: 'grid',
                 gridTemplateColumns: index % 2 === 0 ? '1fr 1fr' : '1fr 1fr', 
                 gap: '48px', 
-                alignItems: 'center' 
+                alignItems: 'center'
               }}
+              className="projects-item"
             >
               <div style={{ order: index % 2 === 0 ? 1 : 2 }} className="glass">
                 <div className="project-img-wrapper">

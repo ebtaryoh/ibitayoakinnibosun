@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <section className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
       <div className="glow-bg" style={{ top: '20%', left: '50%', transform: 'translate(-50%, -50%)' }}></div>
       
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'center', position: 'relative', zIndex: 10 }}>
+      <div className="container hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'center', position: 'relative', zIndex: 10 }}>
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,11 +19,11 @@ const Hero: React.FC = () => {
           <h1 style={{ fontSize: '4.5rem', marginBottom: '24px', lineHeight: 1.1 }}>
             Crafting <span className="text-gradient">Premium</span> Digital Experiences
           </h1>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '80%', lineHeight: 1.6 }}>
+          <p className="hero-description" style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '80%', lineHeight: 1.6 }}>
             Frontend & Backend Developer. UI/UX Designer. Bridging the gap between beautiful design and robust engineering.
           </p>
           
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
+          <div className="hero-actions" style={{ display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
             <a href="#projects" className="bg-gradient" style={{
               display: 'flex', alignItems: 'center', gap: '8px', padding: '16px 32px', borderRadius: '30px', color: '#fff', fontWeight: 600, fontSize: '1.1rem'
             }}>
@@ -53,6 +53,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           style={{ display: 'flex', justifyContent: 'center' }}
+          className="hero-image"
         >
           <div className="glass" style={{ padding: '24px', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0))', position: 'relative' }}>
              <img src="/profile.jpeg" alt="Ibitayo Akinnibosun" style={{ width: '400px', height: '400px', objectFit: 'cover', borderRadius: '50%', border: '2px solid var(--glass-border)' }} />
