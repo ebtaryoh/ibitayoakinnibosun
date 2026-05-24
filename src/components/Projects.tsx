@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
       title: 'Roots & Radiance Network',
       category: 'Community Enterprise Platform',
       desc: 'A creative and enterprise community empowering diverse voices through arts, movement, and economic opportunity.',
-      tech: ['React', 'Next.js', 'TailwindCSS', 'Node.js'],
+      tech: ['React', 'Vite', 'TypeScript', 'Framer Motion'],
       image: '/roots-radiance.png',
       liveLink: 'https://www.rootsandradiancenetwork.com/',
       githubLink: 'https://github.com/ebtaryoh/rootsandradiance'
